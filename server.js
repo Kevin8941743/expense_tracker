@@ -20,9 +20,10 @@ const price_after_description = args.indexOf("--amount")
 const price = args[price_after_description + 1]
 
 
+
 if (method === "add" && description && price) {
 
-    const day = new Date().toLocaleString()
+    const date = new Date().toLocaleString()
 
     const ids = reading.map(task => task.ID)
     const maxId = ids.length > 0 ? Math.max(...ids) : 0
@@ -32,8 +33,9 @@ if (method === "add" && description && price) {
         ID: newId,
         item: description,
         amount: price,
-        createdAt: day,
-        updatedAt: day
+        createdAt: date,
+        updatedAt: date
+        
     }
 
     reading.push(user)
@@ -50,10 +52,28 @@ else if (method === "summary") {
 
 }
 
+else if (method === "update" && remove) {
+
+    const edit = reading.find(f => f.ID === Number(remove))
+
+    if (edit) {
+        if (description) {
+            edit.item=description
+            edit.updatedAt = new Date().toLocaleString()
+        }
+        if (price) {
+            edit.amount=price
+            edit.updatedAt = new Date().toLocaleString()
+        }
+    }
+
+    fs.writeFileSync("data.json", JSON.stringify(reading, "", 2))
+    console.log(`ID: ${remove} has been updated!`)
+}
+
 else if (method === "delete" && remove) {
-    const removing = reading.filter(f => f.ID != remove)
+    const removing = reading.filter(f => f.ID != Number(remove))
 
     fs.writeFileSync("data.json", JSON.stringify(removing, "", 2))
     console.log(`Expense deleted successfully`)
 }
-
