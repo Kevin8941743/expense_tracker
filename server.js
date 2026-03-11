@@ -5,9 +5,38 @@ if (!fs.existsSync("data.json")) {
     console.log("data.json has been created!")
 }
 
-const reading = JSON.parse(fs.writeFileSync("data.json", "utf-8"))
+const reading = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 
 const args = process.argv
-const method = args[2]
+const method = args[2]? args[2].toLowerCase():null
+
+let description = args[4]? args[4].toLowerCase():null
+let price = args[6]? args[6].toLowerCase():null
+
+if (method === "add" && description && price) {
+
+    const day = new Date().toLocaleString()
+
+    const ids = reading.map(task => task.ID)
+    const maxId = ids.length > 0 ? Math.max(...ids) : 0
+    const newId = maxId + 1
+
+    const user = {
+        ID: newId,
+        item: description,
+        amount: price,
+        createdAt: day,
+        updatedAt: day
+    }
+
+    reading.push(user)
+    fs.writeFileSync("data.json", JSON.stringify(reading, "", 2))
+
+    console.log(`Expense added successfully (ID: ${newId})`)
+
+} else {
+    console.log("Error adding information!")
+    process.exit(1)
+}
 
 
