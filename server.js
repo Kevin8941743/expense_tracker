@@ -34,9 +34,12 @@ if (method === "add" && description && price) {
 
     console.log(`Expense added successfully (ID: ${newId})`)
 
-} else {
-    console.log("Error adding information!")
-    process.exit(1)
-}
+} 
 
+else if (method === "summary") {
+    const zero = 0
+    const total = reading.reduce((accumulator, currentValue) => accumulator + Number(currentValue.amount), zero)
+    console.log(`Total expenses: $${total}`)
+
+}
 
