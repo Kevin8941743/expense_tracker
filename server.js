@@ -10,8 +10,16 @@ const reading = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 const args = process.argv
 const method = args[2]? args[2].toLowerCase():null
 
-let description = args[4]? args[4].toLowerCase():null
-let price = args[6]? args[6].toLowerCase():null
+if (method === "delete") {
+    let id = args[4]
+
+}
+
+const item_after_description = args.indexOf("--description")
+const description = args[item_after_description + 1]
+
+const price_after_description = args.indexOf("--amount")
+const price = args[price_after_description + 1]
 
 if (method === "add" && description && price) {
 
@@ -40,6 +48,10 @@ else if (method === "summary") {
     const zero = 0
     const total = reading.reduce((accumulator, currentValue) => accumulator + Number(currentValue.amount), zero)
     console.log(`Total expenses: $${total}`)
+
+}
+
+else if (method === "delete") {
 
 }
 
