@@ -10,16 +10,15 @@ const reading = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 const args = process.argv
 const method = args[2]? args[2].toLowerCase():null
 
-if (method === "delete") {
-    let id = args[4]
-
-}
+const id_after_delete = args.indexOf("--id")
+const remove = args[id_after_delete + 1]
 
 const item_after_description = args.indexOf("--description")
 const description = args[item_after_description + 1]
 
 const price_after_description = args.indexOf("--amount")
 const price = args[price_after_description + 1]
+
 
 if (method === "add" && description && price) {
 
@@ -51,7 +50,10 @@ else if (method === "summary") {
 
 }
 
-else if (method === "delete") {
+else if (method === "delete" && remove) {
+    const removing = reading.filter(f => f.ID != remove)
 
+    fs.writeFileSync("data.json", JSON.stringify(removing, "", 2))
+    console.log(`Expense deleted successfully`)
 }
 

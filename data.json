@@ -7,13 +7,6 @@
     "updatedAt": "3/11/2026"
   },
   {
-    "ID": 2,
-    "item": "breakfast",
-    "amount": "10",
-    "createdAt": "3/11/2026",
-    "updatedAt": "3/11/2026"
-  },
-  {
     "ID": 3,
     "item": "dinner",
     "amount": "50",
