@@ -1,9 +1,23 @@
 [
   {
     "ID": 1,
+    "item": "Breakfast",
+    "amount": "45",
+    "createdAt": "2026-03-15",
+    "updatedAt": "2026-03-15"
+  },
+  {
+    "ID": 2,
     "item": "Lunch",
-    "amount": "20",
-    "createdAt": "3/11/2026, 11:16:13 PM",
-    "updatedAt": "3/11/2026, 11:17:46 PM"
+    "amount": "70",
+    "createdAt": "2026-03-15",
+    "updatedAt": "2026-03-15"
+  },
+  {
+    "ID": 3,
+    "item": "Dinner",
+    "amount": "150",
+    "createdAt": "2026-03-15",
+    "updatedAt": "2026-03-15"
   }
 ]

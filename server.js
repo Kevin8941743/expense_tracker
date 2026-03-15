@@ -20,10 +20,11 @@ const price_after_description = args.indexOf("--amount")
 const price = args[price_after_description + 1]
 
 
+// User can add their description with the price
 
 if (method === "add" && description && price) {
 
-    const date = new Date().toLocaleString()
+    const date = new Date().toISOString().split("T")[0]
 
     const ids = reading.map(task => task.ID)
     const maxId = ids.length > 0 ? Math.max(...ids) : 0
@@ -76,4 +77,15 @@ else if (method === "delete" && remove) {
 
     fs.writeFileSync("data.json", JSON.stringify(removing, "", 2))
     console.log(`Expense deleted successfully`)
+}
+
+else if (method === "list") {
+
+    console.log("# ID  Date       Description  Amount")
+    
+    reading.forEach(f => (
+        console.log("#", f.ID, f.createdAt.padEnd(12), f.item.padEnd(13), `$${f.amount}`)
+    ))
+
+
 }
