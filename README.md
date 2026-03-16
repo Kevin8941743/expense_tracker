@@ -68,13 +68,12 @@ node index.js budget --budget 500 --month 3
 ```
 Data Structure
 The application stores information in data.json using the following schema:
-| ---
-Field	Description
-ID	Unique identifier (auto-incremented)
-item	Description of the expense
-amount	Numeric value of the cost
-categories	User-defined category tag
-calendar_month	Numeric representation (1-12)
-createdAt	Date the entry was created (YYYY-MM-DD)
-updatedAt	Timestamp of the last update
---- |
+| Field | Description |
+| :--- | :--- |
+| ID | Unique identifier (auto-incremented) |
+| item | Description of the expense |
+| amount | Numeric value of the cost |
+| categories | User-defined category tag |
+| calendar_month | Numeric representation (1-12) |
+| createdAt | Date the entry was created (YYYY-MM-DD) |
+| updatedAt | Timestamp of the last update |
