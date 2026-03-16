@@ -30,6 +30,7 @@ Run the script using `node index.js` followed by the method and flags.
 ### 1. Add an Expense
 ```bash
 node index.js add --description "Lunch" --amount 20 --category "Food" --month 3
+```
 
 2. List All Expenses
 
