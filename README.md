@@ -31,6 +31,7 @@ Run the script using `node index.js` followed by the method and flags.
 ```bash
 node index.js add --description "Lunch" --amount 20 --category "Food" --month 3
 ```
+---
 
 2. List All Expenses
 
@@ -38,12 +39,16 @@ Displays a formatted list of all recorded expenses.
 ```bash
 node index.js list
 ```
+---
+
 3. Update an Expense
 
 You must provide the ID of the expense you wish to modify.
 ```bash
 node index.js update --id 1 --description "Fancy Dinner" --amount 50
 ```
+---
+
 4. Delete an Expense
 ```bash
 node index.js delete --id 1
@@ -53,6 +58,7 @@ node index.js delete --id 1
 ```bash
 Total Summary: node index.js summary
 ```
+---
 ```bash
 Monthly Summary: node index.js summary --month 3
 ```
@@ -60,12 +66,14 @@ Filter by Category
 ```bash
 node index.js category --category "Food"
 ```
+---
 7. Budget Check
 
 Check if your total spending for a specific month exceeds a given limit.
 ```bash
 node index.js budget --budget 500 --month 3
 ```
+---
 Data Structure
 The application stores information in data.json using the following schema:
 | Field | Description |
