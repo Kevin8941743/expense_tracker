@@ -58,7 +58,6 @@ node index.js delete --id 1
 ```bash
 Total Summary: node index.js summary
 ```
----
 ```bash
 Monthly Summary: node index.js summary --month 3
 ```
