@@ -25,6 +25,9 @@ const month = args[month_index + 1]
 const category_index = args.indexOf("--category")
 const category = args[category_index + 1]
 
+const budget_index = args.indexOf("--budget")
+const budget = args[budget_index + 1]
+
 
 
 
@@ -124,4 +127,30 @@ else if (method === "category" && category) {
     category_filtering.forEach(f => console.log(f))
 }
 
-else if (method === "budget")
+else if (method === "budget" && budget && month) {
+
+    const zero = 0
+
+    const month_required = reading.filter(f => f.calendar_month === month)
+
+    const calculating = month_required.reduce((total, value) => total + Number(value.amount), zero)
+
+
+
+    const checking_month = [
+        "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    ]
+
+
+    if (calculating > budget) {
+        console.log(`Exceeding the budget for ${checking_month[month - 1]}`)
+        process.exit(1)
+    }
+    else {
+        console.log(`Not exceeding your budget for ${checking_month[month - 1]}`)
+        console.log(`Total for ${checking_month[month - 1]} is: ${calculating}`)
+    }
+
+
+
+}

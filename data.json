@@ -1,27 +1,36 @@
 [
   {
-    "ID": 1,
-    "item": "fork",
-    "amount": "10",
-    "categories": "utensil",
-    "calendar_month": "2",
+    "ID": 4,
+    "item": "burger",
+    "amount": "20",
+    "categories": "food",
+    "calendar_month": "4",
     "createdAt": "2026-03-16",
     "updatedAt": "2026-03-16"
   },
   {
-    "ID": 2,
-    "item": "spoon",
-    "amount": "5",
-    "categories": "utensil",
-    "calendar_month": "5",
+    "ID": 5,
+    "item": "pizza",
+    "amount": "30",
+    "categories": "food",
+    "calendar_month": "4",
     "createdAt": "2026-03-16",
     "updatedAt": "2026-03-16"
   },
   {
-    "ID": 3,
-    "item": "knife",
-    "amount": "5",
-    "categories": "utensil",
+    "ID": 6,
+    "item": "cheese",
+    "amount": "50",
+    "categories": "food",
+    "calendar_month": "4",
+    "createdAt": "2026-03-16",
+    "updatedAt": "2026-03-16"
+  },
+  {
+    "ID": 7,
+    "item": "shirt",
+    "amount": "80",
+    "categories": "clothing",
     "calendar_month": "9",
     "createdAt": "2026-03-16",
     "updatedAt": "2026-03-16"
