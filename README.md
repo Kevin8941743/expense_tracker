@@ -35,9 +35,9 @@ node index.js add --description "Lunch" --amount 20 --category "Food" --month 3
 2. List All Expenses
 
 Displays a formatted list of all recorded expenses.
-
+```bash
 node index.js list
-
+```
 3. Update an Expense
 
 You must provide the ID of the expense you wish to modify.
