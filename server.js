@@ -104,8 +104,11 @@ else if (method === "summary" && month) {
 
     const checking = month_sum.reduce((total, current) => total + Number(current.amount), zero)
 
+    const checking_month = [
+        "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    ]
 
 
-    console.log(`Total expenses for ${month}: ${checking}`)
+    console.log(`Total expenses for ${checking_month[month - 1]}: ${checking}`)
 
 }
