@@ -77,3 +77,9 @@ The application stores information in data.json using the following schema:
 | calendar_month | Numeric representation (1-12) |
 | createdAt | Date the entry was created (YYYY-MM-DD) |
 | updatedAt | Timestamp of the last update |
+
+## License
+
+This project is open source and available under the MIT License.
+
+roadmap.sh Node.js expense-tracker project URL: https://roadmap.sh/projects/expense-tracker
