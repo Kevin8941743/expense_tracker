@@ -1,25 +1,28 @@
 [
   {
     "ID": 1,
-    "item": "breakfast",
-    "amount": "20",
-    "calendar_month": "5",
+    "item": "fork",
+    "amount": "10",
+    "categories": "utensil",
+    "calendar_month": "2",
     "createdAt": "2026-03-16",
     "updatedAt": "2026-03-16"
   },
   {
     "ID": 2,
-    "item": "lunch",
-    "amount": "50",
+    "item": "spoon",
+    "amount": "5",
+    "categories": "utensil",
     "calendar_month": "5",
     "createdAt": "2026-03-16",
     "updatedAt": "2026-03-16"
   },
   {
     "ID": 3,
-    "item": "dinner",
-    "amount": "20",
-    "calendar_month": "2",
+    "item": "knife",
+    "amount": "5",
+    "categories": "utensil",
+    "calendar_month": "9",
     "createdAt": "2026-03-16",
     "updatedAt": "2026-03-16"
   }

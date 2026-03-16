@@ -28,6 +28,7 @@ const category = args[category_index + 1]
 
 
 
+
 // User can add their description with the price
 
 if (method === "add" && description && price) {
@@ -86,7 +87,6 @@ else if (method === "delete" && remove) {
     const removing = reading.filter(f => f.ID != Number(remove))
 
     fs.writeFileSync("data.json", JSON.stringify(removing, "", 2))
-    console.log(`Expense deleted successfully`)
 }
 
 else if (method === "list") {
@@ -116,3 +116,12 @@ else if (method === "summary" && month) {
     console.log(`Total expenses for ${checking_month[month - 1]}: ${checking}`)
 
 }
+
+else if (method === "category" && category) {
+
+    const category_filtering = reading.filter(f => f.categories === category)
+
+    category_filtering.forEach(f => console.log(f))
+}
+
+else if (method === "budget")
