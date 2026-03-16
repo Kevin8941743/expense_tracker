@@ -19,6 +19,9 @@ const description = args[description_index + 1]
 const amount_index = args.indexOf("--amount")
 const price = args[amount_index + 1]
 
+const month_index = args.indexOf("--month") 
+const month = args[month_index + 1]
+
 
 
 
@@ -92,4 +95,6 @@ else if (method === "list") {
 
 }
 
-else if (method === "summary" && )
+else if (method === "summary" && month) {
+    
+}
