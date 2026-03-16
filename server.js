@@ -22,6 +22,9 @@ const price = args[amount_index + 1]
 const month_index = args.indexOf("--month") 
 const month = args[month_index + 1]
 
+const category_index = args.indexOf("--category")
+const category = args[category_index + 1]
+
 
 
 
@@ -39,6 +42,7 @@ if (method === "add" && description && price) {
         ID: newId,
         item: description,
         amount: price,
+        categories: category,
         calendar_month: month,
         createdAt: date,
         updatedAt: date
