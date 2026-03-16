@@ -39,6 +39,7 @@ if (method === "add" && description && price) {
         ID: newId,
         item: description,
         amount: price,
+        calendar_month: month,
         createdAt: date,
         updatedAt: date
         
@@ -51,7 +52,7 @@ if (method === "add" && description && price) {
 
 } 
 
-else if (method === "summary") {
+else if (method === "summary" && !month) {
     const zero = 0
     const total = reading.reduce((accumulator, currentValue) => accumulator + Number(currentValue.amount), zero)
     console.log(`Total expenses: $${total}`)
@@ -96,5 +97,15 @@ else if (method === "list") {
 }
 
 else if (method === "summary" && month) {
-    
+
+    const month_sum = reading.filter(f => f.calendar_month === month)
+
+    const zero = 0
+
+    const checking = month_sum.reduce((total, current) => total + Number(current.amount), zero)
+
+
+
+    console.log(`Total expenses for ${month}: ${checking}`)
+
 }

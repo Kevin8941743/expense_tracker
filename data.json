@@ -1,23 +1,26 @@
 [
   {
     "ID": 1,
-    "item": "Breakfast",
-    "amount": "45",
-    "createdAt": "2026-03-15",
-    "updatedAt": "2026-03-15"
+    "item": "breakfast",
+    "amount": "20",
+    "calendar_month": "5",
+    "createdAt": "2026-03-16",
+    "updatedAt": "2026-03-16"
   },
   {
     "ID": 2,
-    "item": "Lunch",
-    "amount": "70",
-    "createdAt": "2026-03-15",
-    "updatedAt": "2026-03-15"
+    "item": "lunch",
+    "amount": "50",
+    "calendar_month": "5",
+    "createdAt": "2026-03-16",
+    "updatedAt": "2026-03-16"
   },
   {
     "ID": 3,
-    "item": "Dinner",
-    "amount": "150",
-    "createdAt": "2026-03-15",
-    "updatedAt": "2026-03-15"
+    "item": "dinner",
+    "amount": "20",
+    "calendar_month": "2",
+    "createdAt": "2026-03-16",
+    "updatedAt": "2026-03-16"
   }
 ]
