@@ -10,14 +10,16 @@ const reading = JSON.parse(fs.readFileSync("data.json", "utf-8"))
 const args = process.argv
 const method = args[2]? args[2].toLowerCase():null
 
-const id_after_delete = args.indexOf("--id")
-const remove = args[id_after_delete + 1]
+const id_index = args.indexOf("--id")
+const remove = args[id_index + 1]
 
-const item_after_description = args.indexOf("--description")
-const description = args[item_after_description + 1]
+const description_index = args.indexOf("--description")
+const description = args[description_index + 1]
 
-const price_after_description = args.indexOf("--amount")
-const price = args[price_after_description + 1]
+const amount_index = args.indexOf("--amount")
+const price = args[amount_index + 1]
+
+
 
 
 // User can add their description with the price
@@ -89,3 +91,5 @@ else if (method === "list") {
 
 
 }
+
+else if (method === "summary" && )
